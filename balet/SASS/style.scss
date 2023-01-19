@@ -10,3 +10,45 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+li {
+    list-style-type: none;  
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#app{
+    background: gainsboro;
+    @include size( 375px, 5100px);
+    display: flex;
+    justify-content: center;
+    margin-left: 400px;
+}
+
+header{
+    display: flex;
+    @include flexbox (row, space-between, start,$pading-l, 375px);
+    background: $primari-bg-color;
+
+    .logo{
+        @include font ($font-size-l,$primary-font-family,$primari-text-color);
+    }
+
+    .menu-wrapper{
+        display: flex;
+        flex-direction: column;
+
+        .menu{
+            width: 18px;
+            color: $primari-text-color;
+            margin: 1px;
+        }
+    }
+}
+
+   
+
+

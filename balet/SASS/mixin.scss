@@ -7,9 +7,10 @@
     padding: $pad;
  }
 
- @mixin font ($fontSize, $fontFamily) {
+ @mixin font ($fontSize, $fontFamily,$color-text) {
     font-size: $fontSize ;
     font-family: $fontFamily;
+    color: $color-text;
  }
 
  @mixin size ($width, $height) {
