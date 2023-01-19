@@ -1,0 +1,21 @@
+@mixin flexbox ( $flexDirection,$justifyContent,$alignItems , $pad ,$width) {
+    display: flex;
+    flex-direction:$flexDirection ;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    width: $width or 100%;
+    padding: $pad;
+ }
+
+ @mixin font ($fontSize, $fontFamily) {
+    font-size: $fontSize ;
+    font-family: $fontFamily;
+ }
+
+ @mixin size ($width, $height) {
+    width: $width;
+    height: $height;
+    
+ }
+
+ 
