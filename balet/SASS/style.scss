@@ -74,17 +74,43 @@ a {
 }
 
 .aside{
-    width:416px ;
+    background-image: url('../public/images/banner-2.png');
+    background-size:cover ;
+    width:375px ;
+    height: 165px;
 
-    .img{
-        width: 375px;
-    }
-
-    .play-wrapper{
+    .play{
+        width: 20px;
+        height: 20px;
         position: relative;
-        margin-top: -25%;
-        margin-left: 40%;
+        margin-top: 20%;
+        margin-left: 50%;
     }
+}
+
+.section{
+   
+    display: flex;
+    @include flexbox (column, start, start, $pading-l, 375px);
+    background: $secondary-bg-color;
+
+    .about-title{
+        @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
+        margin-top: $margin-s;
+    }
+
+    .about-paragraph{
+        @include font ($font-size-s,$assistant-font-family,$primari-text-color);
+        margin-top: $margin-s;
+    }
+
+    .about-img{
+        @include size (296px, 130px) ;
+        margin-top: $margin-s;
+            
+        
+    }
+
 
    
 }
