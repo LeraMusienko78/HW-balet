@@ -38,7 +38,7 @@ a {
         @include flexbox (row, space-between, start,$pading-l, 375px);
     
         .logo{
-            @include font ($font-size-l,$inter-font-family,$primari-text-color);
+            @include font ($font-size-l,$inter-font-family,$primary-text-color);
         }
     
         .menu-wrapper{
@@ -47,10 +47,10 @@ a {
     
             .menu{
                 width: 18px;
-                color: $primari-text-color;
+                color: $primary-text-color;
                 margin: 1px;
                 border: none;
-                border-bottom:2px solid  $primari-text-color;
+                border-bottom:2px solid  $primary-text-color;
             }
         }
     }
@@ -60,11 +60,11 @@ a {
         @include flexbox (column, start, start, $pading-l , 375px);
 
         &-title{
-            @include font ($font-size-xxl,$kaiseiOpti-font-family,$primari-text-color);
+            @include font ($font-size-xxl,$kaiseiOpti-font-family,$primary-text-color);
         }
 
         &-description{
-            @include font ($font-size-s, $assistant-font-family, $primari-text-color);
+            @include font ($font-size-s, $assistant-font-family, $primary-text-color);
             margin-top: $margin-s;
         }
     }
@@ -90,13 +90,14 @@ a {
     @include flexbox (column, start, start, $pading-l, 375px);
     background: $secondary-bg-color;
 
+
     &-title{
-        @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
+        @include font($font-size-xl,$kaiseiOpti-font-family,$primary-text-color);
         margin-top: $margin-s;
     }
 
     &-paragraph{
-        @include font ($font-size-s,$assistant-font-family,$primari-text-color);
+        @include font ($font-size-s,$assistant-font-family,$secondary-text-color);
         margin-top: $margin-s;
     }
 
@@ -112,11 +113,11 @@ a {
     background: $secondary-bg-color;
 
     &-title{
-        @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
+        @include font($font-size-xl,$kaiseiOpti-font-family,$primary-text-color);
     }
 
     .paragraph-title{
-        @include font($font-size-m,$assistant-font-family,$primari-text-color);
+        @include font($font-size-m,$assistant-font-family,$primary-text-color);
         margin-top:  $margin-s;
     }
 
@@ -125,7 +126,7 @@ a {
     }
 
     .paragraph{
-        @include font($font-size-s,$assistant-font-family,$primari-text-color);
+        @include font($font-size-s,$assistant-font-family,$secondary-text-color);
         margin-top:  $margin-s;
     }
 
@@ -141,7 +142,7 @@ a {
     background: $secondary-bg-color;
 
     .title{
-        @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color); 
+        @include font($font-size-xl,$kaiseiOpti-font-family,$primary-text-color); 
     }
 
     .photo{
@@ -150,7 +151,7 @@ a {
     }
 
     .name{
-        @include font($font-size-m,$assistant-font-family,$primari-text-color);
+        @include font($font-size-m,$assistant-font-family,$primary-text-color);
         margin-top: $margin-s;
     }
 
@@ -158,7 +159,7 @@ a {
         @include flexbox (row, end ,center, $pading-l, 375px);
 
         .arrow-text{
-            @include font($font-size-xs,$assistant-font-family,$primari-text-color);
+            @include font($font-size-xs,$assistant-font-family,$primary-text-color);
             margin-right:$margin-xs;
         }
 
@@ -175,27 +176,45 @@ a {
     background: $secondary-bg-color;
 
     .title{
-        @include font ($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
+        @include font ($font-size-xl,$kaiseiOpti-font-family,$secondary-text-color);
     }
 
     .group-img{
         @include size (296px, 211px) ;
+        margin-top: $margin-m;
+    }
+
+    .text-wrapper{
+        position: relative;
+        margin-left: $margin-xs;
+        margin-top: -100px;
+
+        .text{
+            @include font ($font-size-m,$assistant-font-family,$secondary-text-color);
+            margin-top: 20px;
+           
+        }
+    }
+
+    .arrow-wrapper{
+        @include flexbox (row, end ,center, $pading-l, 335px);
         margin-top: $margin-s;
+
+
+        .arrow-text{
+            @include font($font-size-xs,$assistant-font-family,$primary-text-color);
+            margin-right:$margin-xs;
+        }
+
+        .arrow{
+            display: flex;
+            width: 30px;
+        }
     }
 
-    .text-1{
-        @include font ($font-size-xs,$assistant-font-family,$primari-text-color);
-        position: relative;
-        margin-top: -30px;
-        margin-left: $margin-xs;
-    }
+   
 
-    .text-2{
-        @include font ($font-size-xs,$assistant-font-family,$primari-text-color);
-        position: relative;
-        margin-top: -50px;
-        margin-left: $margin-xs;
-    }
+   
 }
 
 
