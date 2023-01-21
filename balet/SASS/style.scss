@@ -71,7 +71,7 @@ a {
 }
 
 .aside{
-    background-image: url('../public/images/banner-2.png');
+    background-image: url('../images/banner-2.png');
     background-size:cover ;
     width:375px ;
     height: 165px;
@@ -118,15 +118,11 @@ a {
     .paragraph-title{
         @include font($font-size-m,$assistant-font-family,$primari-text-color);
         margin-top:  $margin-s;
-
-       
     }
 
     .gray{
         color:$third-text-color;
     }
-
-    
 
     .paragraph{
         @include font($font-size-s,$assistant-font-family,$primari-text-color);
@@ -137,8 +133,42 @@ a {
         @include size (296px, 92px) ;
         margin-top: $margin-s;
     }
+}  
     
-}    
+.trainers{
+    display: flex;
+    @include flexbox (column, center ,center, $pading-l, 375px);
+    background: $secondary-bg-color;
+
+    .title{
+        @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color); 
+    }
+
+    .photo{
+        @include size (296px, 322px) ;
+        margin-top: $margin-s;
+    }
+
+    .name{
+        @include font($font-size-m,$assistant-font-family,$primari-text-color);
+        margin-top: $margin-s;
+    }
+
+    .arrow-wrapper{
+        @include flexbox (row, end ,center, $pading-l, 375px);
+
+        .arrow-text{
+            @include font($font-size-xs,$assistant-font-family,$primari-text-color);
+            margin-right:$margin-xs;
+        }
+
+        .arrow{
+            display: flex;
+            width: 30px;
+        }
+    }
+
+}
 
 
    
