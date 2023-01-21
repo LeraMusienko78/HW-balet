@@ -167,7 +167,35 @@ a {
             width: 30px;
         }
     }
+}
 
+.groups{
+    @include flexbox (column, start ,start, $pading-l, 375px);
+    padding-top: 0;
+    background: $secondary-bg-color;
+
+    .title{
+        @include font ($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
+    }
+
+    .group-img{
+        @include size (296px, 211px) ;
+        margin-top: $margin-s;
+    }
+
+    .text-1{
+        @include font ($font-size-xs,$assistant-font-family,$primari-text-color);
+        position: relative;
+        margin-top: -30px;
+        margin-left: $margin-xs;
+    }
+
+    .text-2{
+        @include font ($font-size-xs,$assistant-font-family,$primari-text-color);
+        position: relative;
+        margin-top: -50px;
+        margin-left: $margin-xs;
+    }
 }
 
 
