@@ -25,12 +25,10 @@ a {
     @include size( 375px, 5100px);
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     margin-left: 400px;
 }
 
 .container{
-   
     background-image: url('../images/banner.png');
     background-size:cover ;
     height: 476px;
@@ -61,14 +59,13 @@ a {
         display: flex;
         @include flexbox (column, start, start, $pading-l , 375px);
 
-        .banner-title{
+        &-title{
             @include font ($font-size-xxl,$kaiseiOpti-font-family,$primari-text-color);
         }
 
-        .banner-description{
+        &-description{
             @include font ($font-size-s, $assistant-font-family, $primari-text-color);
             margin-top: $margin-s;
-            
         }
     }
 }
@@ -88,32 +85,61 @@ a {
     }
 }
 
-.section{
-   
+.about{
     display: flex;
     @include flexbox (column, start, start, $pading-l, 375px);
     background: $secondary-bg-color;
 
-    .about-title{
+    &-title{
         @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
         margin-top: $margin-s;
     }
 
-    .about-paragraph{
+    &-paragraph{
         @include font ($font-size-s,$assistant-font-family,$primari-text-color);
         margin-top: $margin-s;
     }
 
-    .about-img{
+    &-img{
         @include size (296px, 130px) ;
         margin-top: $margin-s;
-            
-        
+    }
+}
+
+.directions{
+    display: flex;
+    @include flexbox (column, start, start, $pading-l, 375px);
+    background: $secondary-bg-color;
+
+    &-title{
+        @include font($font-size-xl,$kaiseiOpti-font-family,$primari-text-color);
     }
 
+    .paragraph-title{
+        @include font($font-size-m,$assistant-font-family,$primari-text-color);
+        margin-top:  $margin-s;
 
-   
-}
+       
+    }
+
+    .gray{
+        color:$third-text-color;
+    }
+
+    
+
+    .paragraph{
+        @include font($font-size-s,$assistant-font-family,$primari-text-color);
+        margin-top:  $margin-s;
+    }
+
+    &-img{
+        @include size (296px, 92px) ;
+        margin-top: $margin-s;
+    }
+    
+}    
+
 
    
 
