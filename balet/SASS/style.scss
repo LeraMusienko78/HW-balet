@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+fieldset{
+    border: none;
+}
+
 li {
     list-style-type: none;  
 }
@@ -200,7 +204,6 @@ a {
         @include flexbox (row, end ,center, $pading-l, 335px);
         margin-top: $margin-s;
 
-
         .arrow-text{
             @include font($font-size-xs,$assistant-font-family,$primary-text-color);
             margin-right:$margin-xs;
@@ -211,10 +214,6 @@ a {
             width: 30px;
         }
     }
-
-   
-
-   
 }
 
 
