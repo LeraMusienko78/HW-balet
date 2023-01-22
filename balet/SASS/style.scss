@@ -216,6 +216,131 @@ a {
     }
 }
 
+.get-in-touch{
+    @include flexbox( column, start,start,$pading-l,375px);
+    padding-top: 0px;
+    background: $secondary-bg-color;
+
+    .form-wrapper{
+
+        .title{
+            @include font($font-size-xl,$kaiseiOpti-font-family,$primary-text-color);
+            display: flex;
+            justify-content: center;
+        }
+        .form{
+            margin-top: $margin-xs;
+            
+            .input{
+                background: inherit;
+                width: 296px;
+                margin-top: $margin-s;
+                border: none;
+                border-bottom: 1px solid $primary-text-color;
+                padding: 5px;
+                color: white;
+            }
+
+            .agreement{
+                margin-top: $margin-m;
+                display: flex;
+                
+
+                .input{
+                    @include size (0px,0px);
+                    margin-top: 0px;
+                }
+
+                .check{
+                    @include size (20px,20px);
+                    position: relative;
+                }
+
+                .input-agreement{
+                    @include font($font-size-s,$assistant-font-family,$primary-text-color);
+                    display: flex;
+                    margin-left: $margin-xs;
+                }
+            }
+
+            .button-wrapper{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+               
+               
+                .button{
+                    background: inherit;
+                    border: none;
+                    @include font ($font-size-l,$assistant-font-family,$primary-text-color);
+                }
+
+                .arrow{
+                    width: 30px;
+                    height: 4px;
+                    margin-top: $margin-xxs;
+                    margin-left: $margin-xs;
+                }
+            }
+        }
+    }
+
+    .line{
+        width: 296px ;
+        border: none;
+        border-bottom: 1px solid $secondary-text-color;
+        margin-top: $margin-xxl;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background: $secondary-bg-color;
+
+    .section{
+        display: flex;
+    }
+
+    .logo{
+        padding: 40px;
+        padding-right: 0px;
+        @include font ($font-size-l,$inter-font-family,$primary-text-color);
+    }
+
+    .content-wrapper{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 40px;
+        margin-right: 130px;
+
+        .content{
+           @include font($font-size-s,$kaiseiOpti-font-family,$secondary-text-color);
+           margin-top: 20px;
+        }
+
+        .contact-wrapper{
+            display: flex;
+            margin-top: 20px;
+
+            .contact{
+                @include size(15px,15px);
+            }
+        }
+    }
+
+    .end{
+        display: flex;
+        justify-content: center;
+        padding: 60px;
+        @include font($font-size-s,$assistant-font-family,$primary-text-color);
+       
+        
+    }
+}
+
 
    
 
