@@ -238,7 +238,7 @@ a {
                 border: none;
                 border-bottom: 1px solid $primary-text-color;
                 padding: 5px;
-                color: white;
+               
             }
 
             .agreement{
@@ -300,44 +300,49 @@ footer{
 
     .section{
         display: flex;
+        margin-left: 40px
     }
 
     .logo{
-        padding: 40px;
-        padding-right: 0px;
         @include font ($font-size-l,$inter-font-family,$primary-text-color);
+        width: 20%;
     }
 
-    .content-wrapper{
-        width: 300px;
+    .footer-nav{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-        margin-right: 130px;
+        @include flexbox(column, center ,center,0px, 100%);
+        margin-right: 100px;
 
-        .content{
-           @include font($font-size-s,$kaiseiOpti-font-family,$secondary-text-color);
-           margin-top: 20px;
+        .nav-link {
+            @include font($font-size-s,$kaiseiOpti-font-family,$secondary-text-color);
+            margin-top: 20px;
+        }
+        .nav-link:first-child,.content:first-child{
+            margin-top: 0px;
         }
 
         .contact-wrapper{
+            width: 45px;
             display: flex;
-            margin-top: 20px;
+            justify-content: space-between;
 
             .contact{
-                @include size(15px,15px);
+                width: 15px;
+                margin-top: 30px;
             }
         }
-    }
 
+        .content{
+            @include font($font-size-s,$assistant-font-family,$secondary-text-color);
+            margin-top: 20px;
+        }
+    }
+   
     .end{
         display: flex;
         justify-content: center;
         padding: 60px;
         @include font($font-size-s,$assistant-font-family,$primary-text-color);
-       
-        
     }
 }
 
